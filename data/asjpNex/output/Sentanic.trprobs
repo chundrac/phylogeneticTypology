@@ -1,0 +1,22 @@
+#NEXUS
+[ID: 7326611902]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 Snt.SENTANI.SENTANI,
+    2 Snt.SENTANI.TABLA,
+    3 Snt.SENTANI.TABLA_C,
+    4 Snt.SENTANI.TABLA_UNKNOWN_DIAL,
+    5 Snt.SENTANI.TABLA_W;
+   tree tree_1 [p = 0.421, P = 0.421] = [&W 0.421158] ((5,1),((4,3),2));
+   tree tree_2 [p = 0.217, P = 0.638] = [&W 0.216567] (1,(5,((4,3),2)));
+   tree tree_3 [p = 0.182, P = 0.819] = [&W 0.181637] (5,(1,((4,3),2)));
+   tree tree_4 [p = 0.125, P = 0.944] = [&W 0.124750] ((4,3),((5,1),2));
+   tree tree_5 [p = 0.054, P = 0.998] = [&W 0.053892] (((4,3),(5,1)),2);
+   tree tree_6 [p = 0.001, P = 0.999] = [&W 0.000998] (3,(4,((5,1),2)));
+   tree tree_7 [p = 0.001, P = 1.000] = [&W 0.000998] (4,(3,((5,1),2)));
+end;

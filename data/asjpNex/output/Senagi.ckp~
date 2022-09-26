@@ -1,0 +1,130 @@
+#NEXUS
+[ID: 7724640886]
+[generation: 998000]
+
+begin trees;
+	translate
+       1 Sen.SENAGI.AMGOTRO,
+       2 Sen.SENAGI.ANGOR,
+       3 Sen.SENAGI.MONGOWAR;
+	tree mcmc.tree_1 [&B IgrBrlens] = [&R] [&clockrate = 1.000000000000000e+00] ((2:4.087838190268651e-02[&B IgrBrlens 6.614348932474677e-02],1:4.087838190268651e-02[&B IgrBrlens 4.360129127220738e-02]):1.058092629850485e-02[&B IgrBrlens 1.801389434685717e-03],3:5.145930820119136e-02[&B IgrBrlens 3.412396419999615e-02]);
+	tree mcmc.tree_2 [&B IgrBrlens] = [&R] [&clockrate = 1.000000000000000e+00] ((2:4.364854578890209e-02[&B IgrBrlens 5.384420761242292e-02],1:4.364854578890209e-02[&B IgrBrlens 4.063067317022002e-02]):9.613343153410982e-03[&B IgrBrlens 2.499566189951580e-03],3:5.326188894231307e-02[&B IgrBrlens 4.485935928235028e-02]);
+	tree mcmc.tree_3 [&B IgrBrlens] = [&R] [&clockrate = 1.000000000000000e+00] (3:6.123317853092308e-02[&B IgrBrlens 1.670045604842850e-02],(1:2.316372432960329e-02[&B IgrBrlens 4.065434800110974e-02],2:2.316372432960329e-02[&B IgrBrlens 6.985131064801885e-02]):3.806945420131978e-02[&B IgrBrlens 3.907779797622869e-02]);
+	tree mcmc.tree_4 [&B IgrBrlens] = [&R] [&clockrate = 1.000000000000000e+00] ((2:4.585936791139177e-02[&B IgrBrlens 6.545995401916915e-02],1:4.585936791139177e-02[&B IgrBrlens 5.309217437267127e-02]):8.755032479231137e-03[&B IgrBrlens 7.131551823150335e-03],3:5.461440039062290e-02[&B IgrBrlens 3.009039823692370e-02]);
+	tree mcmc.tree_5 [&B IgrBrlens] = [&R] [&clockrate = 1.000000000000000e+00] ((3:2.676219577486786e-02[&B IgrBrlens 3.412770508829981e-02],2:2.676219577486786e-02[&B IgrBrlens 7.567144903208393e-02]):1.744376919004255e-02[&B IgrBrlens 3.759440187546743e-03],1:4.420596496491041e-02[&B IgrBrlens 2.984993361609603e-02]);
+	tree mcmc.tree_6 [&B IgrBrlens] = [&R] [&clockrate = 1.000000000000000e+00] (2:4.421232273876671e-02[&B IgrBrlens 3.784254733363205e-02],(3:4.119694398208095e-02[&B IgrBrlens 4.269344681140553e-02],1:4.119694398208095e-02[&B IgrBrlens 4.625044702352221e-02]):3.015378756685755e-03[&B IgrBrlens 1.704209570036340e-02]);
+	tree mcmc.tree_7 [&B IgrBrlens] = [&R] [&clockrate = 1.000000000000000e+00] ((2:4.717842148616994e-02[&B IgrBrlens 4.893543494201517e-02],1:4.717842148616994e-02[&B IgrBrlens 3.756204568580368e-02]):2.349376917139344e-03[&B IgrBrlens 9.170755017028544e-04],3:4.952779840330929e-02[&B IgrBrlens 3.948694939391132e-02]);
+	tree mcmc.tree_8 [&B IgrBrlens] = [&R] [&clockrate = 1.000000000000000e+00] ((1:4.102065962324337e-02[&B IgrBrlens 7.163211387805098e-02],3:4.102065962324337e-02[&B IgrBrlens 4.079742014976855e-02]):3.793706008644385e-03[&B IgrBrlens 2.197494442113269e-02],2:4.481436563188776e-02[&B IgrBrlens 2.082141082468612e-02]);
+end;
+
+begin mrbayes;
+	startvals
+		Tau(1,1)=mcmc.tree_1
+		Tau(1,4)=mcmc.tree_2
+		Tau(1,3)=mcmc.tree_3
+		Tau(1,2)=mcmc.tree_4
+		Tau(2,2)=mcmc.tree_5
+		Tau(2,3)=mcmc.tree_6
+		Tau(2,1)=mcmc.tree_7
+		Tau(2,4)=mcmc.tree_8
+		V(1,1)=mcmc.tree_1
+		IgrBrlens(1,1)=mcmc.tree_1
+		V(1,4)=mcmc.tree_2
+		IgrBrlens(1,4)=mcmc.tree_2
+		V(1,3)=mcmc.tree_3
+		IgrBrlens(1,3)=mcmc.tree_3
+		V(1,2)=mcmc.tree_4
+		IgrBrlens(1,2)=mcmc.tree_4
+		V(2,2)=mcmc.tree_5
+		IgrBrlens(2,2)=mcmc.tree_5
+		V(2,3)=mcmc.tree_6
+		IgrBrlens(2,3)=mcmc.tree_6
+		V(2,1)=mcmc.tree_7
+		IgrBrlens(2,1)=mcmc.tree_7
+		V(2,4)=mcmc.tree_8
+		IgrBrlens(2,4)=mcmc.tree_8
+		Pi(1,1)=(9.827677759550225e-01,1.723222404497759e-02)
+		Pi(1,4)=(9.823612142234949e-01,1.763878577650519e-02)
+		Pi(1,3)=(9.816454953995148e-01,1.835450460048525e-02)
+		Pi(1,2)=(9.816087894169796e-01,1.839121058302040e-02)
+		Pi(2,2)=(9.810682422267212e-01,1.893175777327885e-02)
+		Pi(2,3)=(9.815686281887360e-01,1.843137181126391e-02)
+		Pi(2,1)=(9.812796341156718e-01,1.872036588432821e-02)
+		Pi(2,4)=(9.827063536078432e-01,1.729364639215678e-02)
+		Alpha(1,1)=(1.143582114752359e+00)
+		Alpha(1,4)=(1.179512127832476e+00)
+		Alpha(1,3)=(1.073864027832095e+00)
+		Alpha(1,2)=(1.094283726119246e+00)
+		Alpha(2,2)=(1.417590189842769e+00)
+		Alpha(2,3)=(1.065050678462633e+00)
+		Alpha(2,1)=(1.407522227735996e+00)
+		Alpha(2,4)=(1.279972953084534e+00)
+		Igrvar(1,1)=(3.123632638948901e-02)
+		Igrvar(1,4)=(4.878231031589526e-03)
+		Igrvar(1,3)=(3.525146609074266e-02)
+		Igrvar(1,2)=(2.999082931269575e-02)
+		Igrvar(2,2)=(2.584944897799121e-02)
+		Igrvar(2,3)=(6.124647451626000e-03)
+		Igrvar(2,1)=(8.642621312731268e-03)
+		Igrvar(2,4)=(8.798062878336367e-02)
+	;
+	propset
+		Dirichlet(Pi)$alpha(1,1)=2.075080607674091e+02
+		Dirichlet(Pi)$alpha(1,4)=2.054433210643857e+02
+		Dirichlet(Pi)$alpha(1,3)=2.054433210643857e+02
+		Dirichlet(Pi)$alpha(1,2)=2.117000016612642e+02
+		Dirichlet(Pi)$alpha(2,2)=2.095935514494332e+02
+		Dirichlet(Pi)$alpha(2,3)=2.054433210643857e+02
+		Dirichlet(Pi)$alpha(2,1)=2.117000016612642e+02
+		Dirichlet(Pi)$alpha(2,4)=1.993715533243054e+02
+		Slider(Pi)$delta(1,1)=9.638179801804116e-02
+		Slider(Pi)$delta(1,4)=9.542278310420757e-02
+		Slider(Pi)$delta(1,3)=9.447331054820364e-02
+		Slider(Pi)$delta(1,2)=9.447331054820364e-02
+		Slider(Pi)$delta(2,2)=9.638179801804116e-02
+		Slider(Pi)$delta(2,3)=9.353328540198257e-02
+		Slider(Pi)$delta(2,1)=9.447331054820364e-02
+		Slider(Pi)$delta(2,4)=9.638179801804116e-02
+		Multiplier(Alpha)$lambda(1,1)=1.699657439944399e+00
+		Multiplier(Alpha)$lambda(1,4)=1.751419715158532e+00
+		Multiplier(Alpha)$lambda(1,3)=1.804758386340687e+00
+		Multiplier(Alpha)$lambda(1,2)=1.769021775930382e+00
+		Multiplier(Alpha)$lambda(2,2)=1.733992797817720e+00
+		Multiplier(Alpha)$lambda(2,3)=1.733992797817721e+00
+		Multiplier(Alpha)$lambda(2,1)=1.616764168446667e+00
+		Multiplier(Alpha)$lambda(2,4)=1.916358412300771e+00
+		NodesliderClock(V)$delta(1,1)=1.112770464246215e-01
+		NodesliderClock(V)$delta(1,4)=1.359140914229494e-01
+		NodesliderClock(V)$delta(1,3)=1.242161266692384e-01
+		NodesliderClock(V)$delta(1,2)=1.254645194968124e-01
+		NodesliderClock(V)$delta(2,2)=1.267254588808902e-01
+		NodesliderClock(V)$delta(2,3)=1.305848236711532e-01
+		NodesliderClock(V)$delta(2,1)=1.158183488390525e-01
+		NodesliderClock(V)$delta(2,4)=1.400532917349510e-01
+		TreeStretch(V)$lambda(1,1)=8.807316502325143e-01
+		TreeStretch(V)$lambda(1,4)=1.033548165974412e+00
+		TreeStretch(V)$lambda(1,3)=9.831414271136086e-01
+		TreeStretch(V)$lambda(1,2)=9.258877275530002e-01
+		TreeStretch(V)$lambda(2,2)=9.930221627234679e-01
+		TreeStretch(V)$lambda(2,3)=9.930221627234679e-01
+		TreeStretch(V)$lambda(2,1)=8.719682238903312e-01
+		TreeStretch(V)$lambda(2,4)=1.003002201377121e+00
+		Multiplier(Igrvar)$lambda(1,1)=3.715556722858352e+00
+		Multiplier(Igrvar)$lambda(1,4)=3.678586315751515e+00
+		Multiplier(Igrvar)$lambda(1,3)=3.828712271230859e+00
+		Multiplier(Igrvar)$lambda(1,2)=3.715556722858352e+00
+		Multiplier(Igrvar)$lambda(2,2)=3.678586315751515e+00
+		Multiplier(Igrvar)$lambda(2,3)=3.752898688733782e+00
+		Multiplier(Igrvar)$lambda(2,1)=3.534346883184309e+00
+		Multiplier(Igrvar)$lambda(2,4)=3.790615947605512e+00
+		Multiplier(IgrBrlens)$lambda(1,1)=3.605745426344019e+00
+		Multiplier(IgrBrlens)$lambda(1,4)=4.025014547085203e+00
+		Multiplier(IgrBrlens)$lambda(1,3)=4.065466615799616e+00
+		Multiplier(IgrBrlens)$lambda(1,2)=3.715556722858352e+00
+		Multiplier(IgrBrlens)$lambda(2,2)=3.945313919093306e+00
+		Multiplier(IgrBrlens)$lambda(2,3)=4.106325234563509e+00
+		Multiplier(IgrBrlens)$lambda(2,1)=3.790615947605512e+00
+		Multiplier(IgrBrlens)$lambda(2,4)=4.629868773531299e+00
+	;
+end;
+

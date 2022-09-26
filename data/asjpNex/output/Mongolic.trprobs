@@ -1,0 +1,32 @@
+#NEXUS
+[ID: 7906516216]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 Alt.MONGOLIC.BURIAT_MONGOLIA,
+    2 Alt.MONGOLIC.DAUR,
+    3 Alt.MONGOLIC.KALMYK,
+    4 Alt.MONGOLIC.MONGOLIAN,
+    5 Alt.MONGOLIC.MONGUOR,
+    6 Alt.MONGOLIC.SANTA_MONGOLIAN,
+    7 Alt.MONGOLIC.TACHENG_DAGUR;
+   tree tree_1 [p = 0.270, P = 0.270] = [&W 0.270459] ((3,(4,1)),((6,5),(7,2)));
+   tree tree_2 [p = 0.241, P = 0.511] = [&W 0.240519] ((6,5),((3,(4,1)),(7,2)));
+   tree tree_3 [p = 0.143, P = 0.654] = [&W 0.142715] (((6,5),(3,(4,1))),(7,2));
+   tree tree_4 [p = 0.068, P = 0.722] = [&W 0.067864] ((3,(4,1)),((7,(6,5)),2));
+   tree tree_5 [p = 0.055, P = 0.776] = [&W 0.054890] ((7,(6,5)),((3,(4,1)),2));
+   tree tree_6 [p = 0.043, P = 0.819] = [&W 0.042914] (((7,(6,5)),(3,(4,1))),2);
+   tree tree_7 [p = 0.034, P = 0.853] = [&W 0.033932] (7,(((6,5),(3,(4,1))),2));
+   tree tree_8 [p = 0.028, P = 0.881] = [&W 0.027944] ((6,5),(7,((3,(4,1)),2)));
+   tree tree_9 [p = 0.026, P = 0.907] = [&W 0.025948] ((3,(4,1)),(7,((6,5),2)));
+   tree tree_10 [p = 0.021, P = 0.928] = [&W 0.020958] (7,((6,5),((3,(4,1)),2)));
+   tree tree_11 [p = 0.018, P = 0.946] = [&W 0.017964] ((6,5),((7,(3,(4,1))),2));
+   tree tree_12 [p = 0.015, P = 0.961] = [&W 0.014970] ((7,(3,(4,1))),((6,5),2));
+   tree tree_13 [p = 0.015, P = 0.976] = [&W 0.014970] ((7,((6,5),(3,(4,1)))),2);
+   tree tree_14 [p = 0.013, P = 0.989] = [&W 0.012974] (((6,5),(7,(3,(4,1)))),2);
+   tree tree_15 [p = 0.011, P = 1.000] = [&W 0.010978] (7,((3,(4,1)),((6,5),2)));
+end;

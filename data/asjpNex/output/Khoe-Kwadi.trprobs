@@ -1,0 +1,19 @@
+#NEXUS
+[ID: 7255811651]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 KK.KHOE_KWADI.KHOEKHOEGOWAB,
+    2 KK.KHOE_KWADI.KHWE,
+    3 KK.KHOE_KWADI.KORANA,
+    4 KK.KHOE_KWADI.KXOE,
+    5 KK.KHOE_KWADI.NAMA,
+    6 KK.KHOE_KWADI.NAMA_2;
+   tree tree_1 [p = 0.444, P = 0.444] = [&W 0.444112] ((3,((6,5),1)),(4,2));
+   tree tree_2 [p = 0.382, P = 0.826] = [&W 0.382236] (4,((3,((6,5),1)),2));
+   tree tree_3 [p = 0.174, P = 1.000] = [&W 0.173653] ((4,(3,((6,5),1))),2);
+end;

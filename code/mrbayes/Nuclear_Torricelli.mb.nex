@@ -1,0 +1,25 @@
+#Nexus
+	Begin MrBayes;
+		set seed=6789580436154794230;
+		set swapseed = 614090213;
+		execute ../data/asjpNex/Nuclear_Torricelli.nex;
+		lset rates=gamma coding=all;
+		constraint c1 = Tor.WAPEI_PALEI.URAT_1 Tor.WAPEI_PALEI.URAT_2 Tor.KOMBIO_ARAPESH.MUFIAN Tor.KOMBIO_ARAPESH.BUKIYIP Tor.KOMBIO_ARAPESH.KOMBIO;
+		constraint c2 = Tor.WAPEI_PALEI.WALMAN Tor.WAPEI_PALEI.WALMAN_CHINAPELI;
+		constraint c3 = Tor.WAPEI_PALEI.AU Tor.WAPEI_PALEI.OLO_ERETEI Tor.WAPEI_PALEI.OLO_LUMI Tor.WAPEI_PALEI.OLO_YEBIL;
+		constraint c4 = Tor.MARIENBERG.KAMASAU Tor.MARIENBERG.KAMASAU_2 Tor.MARIENBERG.KENYARI Tor.MARIENBERG.PARUWA Tor.MARIENBERG.TRING_PNG Tor.MARIENBERG.WANDOMI Tor.MARIENBERG.WAU Tor.MARIENBERG.YIBAB;
+		constraint c5 = Tor.KOMBIO_ARAPESH.MUFIAN Tor.KOMBIO_ARAPESH.BUKIYIP;
+		constraint c6 = Tor.WAPEI_PALEI.OLO_ERETEI Tor.WAPEI_PALEI.OLO_LUMI Tor.WAPEI_PALEI.OLO_YEBIL;
+		prset topologypr = constraints(c1,c2,c3,c4,c5,c6);
+		prset brlenspr = clock:uniform;
+		prset clockvarpr = igr;
+		prset treeagepr=Gamma(0.05, 0.005);
+		prset shapepr=Exponential(10);
+		set beagleprecision=double;
+		mcmcp Burninfrac=0.5 stoprule=no stopval=0.01;
+		mcmcp filename=../data/asjpNex/output/Nuclear_Torricelli;
+		mcmcp samplefreq=1000 printfreq=5000 append=no;
+		mcmc ngen=1000000 nchains=4 nruns=2;
+		sump;
+		sumt;
+	end;

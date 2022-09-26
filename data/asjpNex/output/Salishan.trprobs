@@ -1,0 +1,36 @@
+#NEXUS
+[ID: 7815841079]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 Sal.BELLA_COOLA.BELLA_COOLA,
+    2 Sal.CENTRAL_SALISH.COWICHAN,
+    3 Sal.INTERIOR_SALISH.LILLOOET,
+    4 Sal.CENTRAL_SALISH.MUSQUEAM,
+    5 Sal.CENTRAL_SALISH.SQUAMISH,
+    6 Sal.CENTRAL_SALISH.STOLO,
+    7 Sal.INTERIOR_SALISH.THOMPSON;
+   tree tree_1 [p = 0.270, P = 0.270] = [&W 0.270459] (((7,3),1),(6,(4,(5,2))));
+   tree tree_2 [p = 0.248, P = 0.518] = [&W 0.247505] ((7,3),(1,(6,(4,(5,2)))));
+   tree tree_3 [p = 0.217, P = 0.735] = [&W 0.216567] (1,((7,3),(6,(4,(5,2)))));
+   tree tree_4 [p = 0.052, P = 0.786] = [&W 0.051896] ((7,3),(1,(6,((5,4),2))));
+   tree tree_5 [p = 0.051, P = 0.837] = [&W 0.050898] (((7,3),1),(6,((5,4),2)));
+   tree tree_6 [p = 0.047, P = 0.884] = [&W 0.046906] (1,((7,3),(6,((5,4),2))));
+   tree tree_7 [p = 0.028, P = 0.912] = [&W 0.027944] (((7,3),1),(6,(5,(4,2))));
+   tree tree_8 [p = 0.028, P = 0.940] = [&W 0.027944] (1,((7,3),(6,(5,(4,2)))));
+   tree tree_9 [p = 0.026, P = 0.966] = [&W 0.025948] ((7,3),(1,(6,(5,(4,2)))));
+   tree tree_10 [p = 0.009, P = 0.975] = [&W 0.008982] (((7,3),1),((6,4),(5,2)));
+   tree tree_11 [p = 0.009, P = 0.984] = [&W 0.008982] (1,((7,3),((6,4),(5,2))));
+   tree tree_12 [p = 0.007, P = 0.991] = [&W 0.006986] ((7,3),(1,((6,4),(5,2))));
+   tree tree_13 [p = 0.003, P = 0.994] = [&W 0.002994] (((7,3),1),(4,(6,(5,2))));
+   tree tree_14 [p = 0.001, P = 0.995] = [&W 0.000998] (((7,3),1),((6,5),(4,2)));
+   tree tree_15 [p = 0.001, P = 0.996] = [&W 0.000998] (((7,3),1),(5,(6,(4,2))));
+   tree tree_16 [p = 0.001, P = 0.997] = [&W 0.000998] ((7,3),(1,((6,5),(4,2))));
+   tree tree_17 [p = 0.001, P = 0.998] = [&W 0.000998] ((7,3),(1,((6,(5,4)),2)));
+   tree tree_18 [p = 0.001, P = 0.999] = [&W 0.000998] (1,((7,3),(4,(6,(5,2)))));
+   tree tree_19 [p = 0.001, P = 1.000] = [&W 0.000998] (1,((7,3),((6,(5,4)),2)));
+end;

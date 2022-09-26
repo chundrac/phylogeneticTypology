@@ -1,0 +1,28 @@
+#NEXUS
+[ID: 6999965035]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 Tuc.TUCANOAN.BARASANO,
+    2 Tuc.TUCANOAN.CUBEO,
+    3 Tuc.TUCANOAN.CUBEO_2,
+    4 Tuc.TUCANOAN.DESANO,
+    5 Tuc.TUCANOAN.DESANO_2,
+    6 Tuc.TUCANOAN.KOREGUAJE,
+    7 Tuc.TUCANOAN.KOREGUAYE,
+    8 Tuc.TUCANOAN.SIONA,
+    9 Tuc.TUCANOAN.TANIMUCA,
+   10 Tuc.TUCANOAN.TANIMUCA_RETUARA,
+   11 Tuc.TUCANOAN.TUCANO,
+   12 Tuc.TUCANOAN.TUCANO_2;
+   tree tree_1 [p = 0.858, P = 0.858] = [&W 0.858283] ((8,(7,6)),((10,9),((12,11),(1,((5,4),(3,2))))));
+   tree tree_2 [p = 0.085, P = 0.943] = [&W 0.084830] ((7,6),(8,((10,9),((12,11),(1,((5,4),(3,2)))))));
+   tree tree_3 [p = 0.050, P = 0.993] = [&W 0.049900] (8,((7,6),((10,9),((12,11),(1,((5,4),(3,2)))))));
+   tree tree_4 [p = 0.004, P = 0.997] = [&W 0.003992] ((8,(7,6)),((12,11),((10,9),(1,((5,4),(3,2))))));
+   tree tree_5 [p = 0.002, P = 0.999] = [&W 0.001996] ((8,(7,6)),(((12,11),(10,9)),(1,((5,4),(3,2)))));
+   tree tree_6 [p = 0.001, P = 1.000] = [&W 0.000998] ((7,6),(8,((12,11),((10,9),(1,((5,4),(3,2)))))));
+end;

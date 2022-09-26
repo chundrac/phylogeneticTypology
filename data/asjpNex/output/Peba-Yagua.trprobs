@@ -1,0 +1,16 @@
+#NEXUS
+[ID: 7226181420]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 PY.PEBA_YAGUAN.YAGUA,
+    2 PY.PEBA_YAGUAN.YAGUA_2,
+    3 PY.PEBA_YAGUAN.YAGUA_3;
+   tree tree_1 [p = 0.459, P = 0.459] = [&W 0.459082] (3,(1,2));
+   tree tree_2 [p = 0.272, P = 0.732] = [&W 0.272455] (1,(3,2));
+   tree tree_3 [p = 0.268, P = 1.000] = [&W 0.268463] ((3,1),2);
+end;

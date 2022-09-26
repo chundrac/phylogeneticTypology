@@ -1,0 +1,16 @@
+#NEXUS
+[ID: 7608757539]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 UC.URU_CHIPAYA.CHIPAYA,
+    2 UC.URU_CHIPAYA.CHIPAYA_2,
+    3 UC.URU_CHIPAYA.CHIPAYA_3;
+   tree tree_1 [p = 0.520, P = 0.520] = [&W 0.519960] (1,(3,2));
+   tree tree_2 [p = 0.247, P = 0.766] = [&W 0.246507] (3,(1,2));
+   tree tree_3 [p = 0.234, P = 1.000] = [&W 0.233533] ((3,1),2);
+end;

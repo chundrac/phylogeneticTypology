@@ -1,0 +1,35 @@
+#NEXUS
+[ID: 7540421523]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 Jap.JAPANESE.EI_JAPANESE,
+    2 Jap.JAPANESE.JAPANESE,
+    3 Jap.JAPANESE.JAPANESE_2,
+    4 Jap.JAPANESE.JAPANESE_KYOTO,
+    5 Jap.JAPANESE.TAKARAJIMA_JAPANESE,
+    6 Jap.JAPANESE.TOKYO_JAPANESE;
+   tree tree_1 [p = 0.245, P = 0.245] = [&W 0.244511] ((5,1),((4,3),(6,2)));
+   tree tree_2 [p = 0.220, P = 0.464] = [&W 0.219561] ((4,3),((5,1),(6,2)));
+   tree tree_3 [p = 0.181, P = 0.645] = [&W 0.180639] (((4,3),(5,1)),(6,2));
+   tree tree_4 [p = 0.083, P = 0.728] = [&W 0.082834] ((6,(5,1)),((4,3),2));
+   tree tree_5 [p = 0.058, P = 0.785] = [&W 0.057884] (((4,3),(6,(5,1))),2);
+   tree tree_6 [p = 0.051, P = 0.836] = [&W 0.050898] ((5,1),(6,((4,3),2)));
+   tree tree_7 [p = 0.044, P = 0.880] = [&W 0.043912] ((4,3),((6,(5,1)),2));
+   tree tree_8 [p = 0.041, P = 0.921] = [&W 0.040918] ((6,((4,3),(5,1))),2);
+   tree tree_9 [p = 0.026, P = 0.947] = [&W 0.025948] (1,(5,((4,3),(6,2))));
+   tree tree_10 [p = 0.015, P = 0.962] = [&W 0.014970] (6,(((4,3),(5,1)),2));
+   tree tree_11 [p = 0.012, P = 0.974] = [&W 0.011976] (6,((5,1),((4,3),2)));
+   tree tree_12 [p = 0.009, P = 0.983] = [&W 0.008982] (5,(1,((4,3),(6,2))));
+   tree tree_13 [p = 0.006, P = 0.989] = [&W 0.005988] (5,(1,(6,((4,3),2))));
+   tree tree_14 [p = 0.003, P = 0.992] = [&W 0.002994] (1,(5,(6,((4,3),2))));
+   tree tree_15 [p = 0.002, P = 0.994] = [&W 0.001996] ((4,3),(1,(5,(6,2))));
+   tree tree_16 [p = 0.002, P = 0.996] = [&W 0.001996] (((6,(4,3)),(5,1)),2);
+   tree tree_17 [p = 0.002, P = 0.998] = [&W 0.001996] (3,(4,((5,1),(6,2))));
+   tree tree_18 [p = 0.001, P = 0.999] = [&W 0.000998] (1,(5,((6,(4,3)),2)));
+   tree tree_19 [p = 0.001, P = 1.000] = [&W 0.000998] ((5,1),((6,(4,3)),2));
+end;

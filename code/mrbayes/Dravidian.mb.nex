@@ -1,0 +1,24 @@
+#Nexus
+	Begin MrBayes;
+		set seed=6789580436154794230;
+		set swapseed = 614090213;
+		execute ../data/asjpNex/Dravidian.nex;
+		lset rates=gamma coding=all;
+		constraint c1 = Dra.SOUTH_CENTRAL_DRAVIDIAN.TELUGU Dra.SOUTH_CENTRAL_DRAVIDIAN.TELUGU_2 Dra.SOUTH_CENTRAL_DRAVIDIAN.DORLI_GONDI Dra.SOUTH_CENTRAL_DRAVIDIAN.KUVI;
+		constraint c2 = Dra.SOUTHERN_DRAVIDIAN.KANNADA Dra.SOUTHERN_DRAVIDIAN.MALAYALAM Dra.SOUTHERN_DRAVIDIAN.TAMIL Dra.SOUTHERN_DRAVIDIAN.TULU_INDIA;
+		constraint c3 = Dra.SOUTH_CENTRAL_DRAVIDIAN.TELUGU Dra.SOUTH_CENTRAL_DRAVIDIAN.TELUGU_2;
+		constraint c4 = Dra.SOUTHERN_DRAVIDIAN.KANNADA Dra.SOUTHERN_DRAVIDIAN.MALAYALAM Dra.SOUTHERN_DRAVIDIAN.TAMIL;
+		constraint c5 = Dra.SOUTHERN_DRAVIDIAN.MALAYALAM Dra.SOUTHERN_DRAVIDIAN.TAMIL;
+		prset topologypr = constraints(c1,c2,c3,c4,c5);
+		prset brlenspr = clock:uniform;
+		prset clockvarpr = igr;
+		prset treeagepr=Gamma(0.05, 0.005);
+		prset shapepr=Exponential(10);
+		set beagleprecision=double;
+		mcmcp Burninfrac=0.5 stoprule=no stopval=0.01;
+		mcmcp filename=../data/asjpNex/output/Dravidian;
+		mcmcp samplefreq=1000 printfreq=5000 append=no;
+		mcmc ngen=1000000 nchains=4 nruns=2;
+		sump;
+		sumt;
+	end;

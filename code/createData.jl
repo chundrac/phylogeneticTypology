@@ -19,7 +19,8 @@ Conda.pip_interop(true)
 Conda.pip("install", "ete3")
 
 
-ENV["PYTHON"] = ""
+ENV["PYTHON"] = "/home/ubuntu/.julia/conda/3/lib/python3.9"
+print(ENV["PYTHON"],"\n")
 Pkg.build("PyCall")
 using PyCall
 

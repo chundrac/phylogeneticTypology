@@ -1,0 +1,19 @@
+#NEXUS
+[ID: 7261810672]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 Chi.TALAMANCA.BRIBRI,
+    2 Chi.CHIBCHA_DUIT.CHIBCHA,
+    3 Chi.GUAYMIIC.GUAYMI,
+    4 Chi.GUAYMIIC.NGABERE_MOVE,
+    5 Chi.RAMA.RAMA,
+    6 Chi.TALAMANCA.TERIBE;
+   tree tree_1 [p = 0.432, P = 0.432] = [&W 0.432136] (((4,3),(6,1)),(5,2));
+   tree tree_2 [p = 0.413, P = 0.845] = [&W 0.413174] ((5,((4,3),(6,1))),2);
+   tree tree_3 [p = 0.155, P = 1.000] = [&W 0.154691] (5,(((4,3),(6,1)),2));
+end;

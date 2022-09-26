@@ -1,0 +1,36 @@
+#NEXUS
+[ID: 5166489470]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 OM.MIXTECAN.CHALCATONGO_MIXTEC,
+    2 OM.ZAPOTECAN.CHATINO_WESTERN_HIGHLAND,
+    3 OM.CHINANTECAN.CHINANTEC_COMALTEPEC,
+    4 OM.CHINANTECAN.CHINANTEC_PALANTLA,
+    5 OM.CHINANTECAN.CHINANTEC_QUIOTEPEC,
+    6 OM.ZAPOTECAN.ISTHMUS_ZAPOTEC,
+    7 OM.MIXTECAN.JICALTEPEC_MIXTEC,
+    8 OM.CHINANTECAN.LEALAO_CHINANTEC,
+    9 OM.SUBTIABA_TLAPANEC.MEPHAA_ACATEPEC,
+   10 OM.MIXTECAN.MIXTECO_DE_YOSONDUA,
+   11 OM.MIXTECAN.MIXTEC_PENYOLES,
+   12 OM.MATLATZINCAN.OCUILTECO,
+   13 OM.OTOMIAN.OTOMI_DE_1776,
+   14 OM.OTOMIAN.OTOMI_MEZQUITAL,
+   15 OM.SUBTIABA_TLAPANEC.TEOCUITLAPA_MEPHAA,
+   16 OM.MIXTECAN.TRIQUI_COPALA,
+   17 OM.MIXTECAN.YOSONDUA_MIXTEC,
+   18 OM.ZAPOTECAN.ZAPOTEC_MITLA,
+   19 OM.ZAPOTECAN.ZAPOTEC_YATZACHI,
+   20 OM.ZAPOTECAN.ZAPOTEC_ZOOGOCHO;
+   tree tree_1 [p = 0.602, P = 0.602] = [&W 0.601796] ((15,9),((((14,13),12),(8,(4,(5,3)))),((16,(7,(11,(10,(17,1))))),(((20,19),(18,6)),2))));
+   tree tree_2 [p = 0.152, P = 0.753] = [&W 0.151697] ((((14,13),12),(8,(4,(5,3)))),((15,9),((16,(7,(11,(10,(17,1))))),(((20,19),(18,6)),2))));
+   tree tree_3 [p = 0.133, P = 0.886] = [&W 0.132735] (((15,9),(((14,13),12),(8,(4,(5,3))))),((16,(7,(11,(10,(17,1))))),(((20,19),(18,6)),2)));
+   tree tree_4 [p = 0.077, P = 0.963] = [&W 0.076846] ((15,9),((((14,13),12),(8,(4,(5,3)))),((16,(7,(11,((17,10),1)))),(((20,19),(18,6)),2))));
+   tree tree_5 [p = 0.019, P = 0.982] = [&W 0.018962] ((((14,13),12),(8,(4,(5,3)))),((15,9),((16,(7,(11,((17,10),1)))),(((20,19),(18,6)),2))));
+   tree tree_6 [p = 0.018, P = 1.000] = [&W 0.017964] (((15,9),(((14,13),12),(8,(4,(5,3))))),((16,(7,(11,((17,10),1)))),(((20,19),(18,6)),2)));
+end;

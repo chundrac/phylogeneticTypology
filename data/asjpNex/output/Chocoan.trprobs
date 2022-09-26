@@ -1,0 +1,21 @@
+#NEXUS
+[ID: 7177645372]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 Cho.CHOCO.EMBERA_DARIEN,
+    2 Cho.CHOCO.EMBERA_NORTHERN,
+    3 Cho.CHOCO.EPENA_BASURUDO,
+    4 Cho.CHOCO.EPENA_SAIJA,
+    5 Cho.CHOCO.NORTHERN_EMBERA;
+   tree tree_1 [p = 0.377, P = 0.377] = [&W 0.377246] ((4,3),(5,(1,2)));
+   tree tree_2 [p = 0.327, P = 0.705] = [&W 0.327345] ((5,(4,3)),(1,2));
+   tree tree_3 [p = 0.222, P = 0.926] = [&W 0.221557] (5,((4,3),(1,2)));
+   tree tree_4 [p = 0.038, P = 0.964] = [&W 0.037924] (((5,(4,3)),1),2);
+   tree tree_5 [p = 0.035, P = 0.999] = [&W 0.034930] (1,((5,(4,3)),2));
+   tree tree_6 [p = 0.001, P = 1.000] = [&W 0.000998] (((4,3),1),(5,2));
+end;

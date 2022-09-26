@@ -1,0 +1,27 @@
+#NEXUS
+[ID: 7747796019]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 Dra.SOUTH_CENTRAL_DRAVIDIAN.DORLI_GONDI,
+    2 Dra.SOUTHERN_DRAVIDIAN.KANNADA,
+    3 Dra.SOUTH_CENTRAL_DRAVIDIAN.KUVI,
+    4 Dra.SOUTHERN_DRAVIDIAN.MALAYALAM,
+    5 Dra.SOUTHERN_DRAVIDIAN.TAMIL,
+    6 Dra.SOUTH_CENTRAL_DRAVIDIAN.TELUGU,
+    7 Dra.SOUTH_CENTRAL_DRAVIDIAN.TELUGU_2,
+    8 Dra.SOUTHERN_DRAVIDIAN.TULU_INDIA;
+   tree tree_1 [p = 0.352, P = 0.352] = [&W 0.352295] (8,(((7,6),(3,1)),((5,4),2)));
+   tree tree_2 [p = 0.309, P = 0.662] = [&W 0.309381] (((7,6),(3,1)),(8,((5,4),2)));
+   tree tree_3 [p = 0.172, P = 0.833] = [&W 0.171657] ((8,((7,6),(3,1))),((5,4),2));
+   tree tree_4 [p = 0.053, P = 0.886] = [&W 0.052894] (8,((((7,6),3),1),((5,4),2)));
+   tree tree_5 [p = 0.052, P = 0.938] = [&W 0.051896] ((((7,6),3),1),(8,((5,4),2)));
+   tree tree_6 [p = 0.030, P = 0.968] = [&W 0.029940] ((8,(((7,6),3),1)),((5,4),2));
+   tree tree_7 [p = 0.016, P = 0.984] = [&W 0.015968] (8,((3,((7,6),1)),((5,4),2)));
+   tree tree_8 [p = 0.008, P = 0.992] = [&W 0.007984] ((8,(3,((7,6),1))),((5,4),2));
+   tree tree_9 [p = 0.008, P = 1.000] = [&W 0.007984] ((3,((7,6),1)),(8,((5,4),2)));
+end;

@@ -1,0 +1,31 @@
+#NEXUS
+[ID: 7336543923]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 Tu.TU.AUNI,
+    2 Tu.TU.KAM_KA_KE,
+    3 Tu.TU.MASARWA_KAKIA,
+    4 Tu.TU.NU_EN,
+    5 Tu.TU.XOON,
+    6 Tu.TU.XOON_MASARWA,
+    7 Tu.TU.XOON_NUEN;
+   tree tree_1 [p = 0.362, P = 0.362] = [&W 0.362275] ((4,((6,(7,5)),3)),(1,2));
+   tree tree_2 [p = 0.279, P = 0.642] = [&W 0.279441] (((6,(7,5)),3),(4,(1,2)));
+   tree tree_3 [p = 0.110, P = 0.751] = [&W 0.109780] (1,((4,((6,(7,5)),3)),2));
+   tree tree_4 [p = 0.109, P = 0.860] = [&W 0.108782] (((4,((6,(7,5)),3)),1),2);
+   tree tree_5 [p = 0.055, P = 0.915] = [&W 0.054890] (4,(((6,(7,5)),3),(1,2)));
+   tree tree_6 [p = 0.043, P = 0.958] = [&W 0.042914] ((6,(7,5)),(3,(4,(1,2))));
+   tree tree_7 [p = 0.028, P = 0.986] = [&W 0.027944] (3,((6,(7,5)),(4,(1,2))));
+   tree tree_8 [p = 0.004, P = 0.990] = [&W 0.003992] (((6,(7,5)),3),((4,1),2));
+   tree tree_9 [p = 0.003, P = 0.993] = [&W 0.002994] (((7,(6,5)),3),(4,(1,2)));
+   tree tree_10 [p = 0.002, P = 0.995] = [&W 0.001996] ((((6,(7,5)),3),(4,1)),2);
+   tree tree_11 [p = 0.002, P = 0.997] = [&W 0.001996] ((6,(7,5)),(3,((4,1),2)));
+   tree tree_12 [p = 0.001, P = 0.998] = [&W 0.000998] (((6,(7,5)),3),(1,(4,2)));
+   tree tree_13 [p = 0.001, P = 0.999] = [&W 0.000998] ((7,(6,5)),(3,(4,(1,2))));
+   tree tree_14 [p = 0.001, P = 1.000] = [&W 0.000998] (4,(1,(((6,(7,5)),3),2)));
+end;

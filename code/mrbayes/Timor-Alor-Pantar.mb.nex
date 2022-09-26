@@ -1,0 +1,21 @@
+#Nexus
+	Begin MrBayes;
+		set seed=6789580436154794230;
+		set swapseed = 614090213;
+		execute ../data/asjpNex/Timor-Alor-Pantar.nex;
+		lset rates=gamma coding=all;
+		constraint c1 = TAP.GREATER_ALOR.ABUI TAP.GREATER_ALOR.ABUI_ATIMELANG TAP.GREATER_ALOR.ABUI_MAKADAI TAP.GREATER_ALOR.ABUI_TAKALELANG TAP.GREATER_ALOR.KAMANG TAP.GREATER_ALOR.KAMANG_2 TAP.GREATER_ALOR.KAMANG_KOLOMANE TAP.GREATER_ALOR.KAMANG_LANGKURU TAP.GREATER_ALOR.KAMANG_LETLEY TAP.GREATER_ALOR.KAMANG_PIDO_I TAP.GREATER_ALOR.KAMANG_PIDO_II TAP.GREATER_ALOR.TIFOL_AFENG_ABUI TAP.GREATER_ALOR.ADANG TAP.GREATER_ALOR.ADANG_PITUNG;
+		constraint c2 = TAP.GREATER_ALOR.ADANG TAP.GREATER_ALOR.ADANG_PITUNG;
+		prset topologypr = constraints(c1,c2);
+		prset brlenspr = clock:uniform;
+		prset clockvarpr = igr;
+		prset treeagepr=Gamma(0.05, 0.005);
+		prset shapepr=Exponential(10);
+		set beagleprecision=double;
+		mcmcp Burninfrac=0.5 stoprule=no stopval=0.01;
+		mcmcp filename=../data/asjpNex/output/Timor-Alor-Pantar;
+		mcmcp samplefreq=1000 printfreq=5000 append=no;
+		mcmc ngen=1000000 nchains=4 nruns=2;
+		sump;
+		sumt;
+	end;

@@ -1,0 +1,18 @@
+#Nexus
+	Begin MrBayes;
+		set seed=6789580436154794230;
+		set swapseed = 614090213;
+		execute ../data/asjpNex/Peba-Yagua.nex;
+		lset rates=gamma coding=all;
+		prset brlenspr = clock:uniform;
+		prset clockvarpr = igr;
+		prset treeagepr=Gamma(0.05, 0.005);
+		prset shapepr=Exponential(10);
+		set beagleprecision=double;
+		mcmcp Burninfrac=0.5 stoprule=no stopval=0.01;
+		mcmcp filename=../data/asjpNex/output/Peba-Yagua;
+		mcmcp samplefreq=1000 printfreq=5000 append=no;
+		mcmc ngen=1000000 nchains=4 nruns=2;
+		sump;
+		sumt;
+	end;

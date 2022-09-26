@@ -1,0 +1,25 @@
+#Nexus
+	Begin MrBayes;
+		set seed=6789580436154794230;
+		set swapseed = 614090213;
+		execute ../data/asjpNex/Tai-Kadai.nex;
+		lset rates=gamma coding=all;
+		constraint c1 = TK.HLAI.BAODING_HLAI TK.HLAI.LI_BAODING TK.HLAI.LI_TONGSHI;
+		constraint c2 = TK.KAM_TAI.NUNG TK.KAM_TAI.TAI_WESTERN_NUNG TK.KAM_TAI.KHORAT_THAI TK.KAM_TAI.LAO TK.KAM_TAI.LAOTIEN TK.KAM_TAI.SIAMESE TK.KAM_TAI.SIAMESE_2 TK.KAM_TAI.TAI TK.KAM_TAI.TAI_NONG_KHAI TK.KAM_TAI.THAI TK.KAM_TAI.THAI_2 TK.KAM_TAI.THAI_3 TK.KAM_TAI.PO_AI TK.KAM_TAI.WANGMO_BOUYEI TK.KAM_TAI.YAY TK.KAM_TAI.YAY_2;
+		constraint c3 = TK.KAM_TAI.NUNG TK.KAM_TAI.TAI_WESTERN_NUNG TK.KAM_TAI.KHORAT_THAI TK.KAM_TAI.LAO TK.KAM_TAI.LAOTIEN TK.KAM_TAI.SIAMESE TK.KAM_TAI.SIAMESE_2 TK.KAM_TAI.TAI TK.KAM_TAI.TAI_NONG_KHAI TK.KAM_TAI.THAI TK.KAM_TAI.THAI_2 TK.KAM_TAI.THAI_3;
+		constraint c4 = TK.KAM_TAI.PO_AI TK.KAM_TAI.WANGMO_BOUYEI TK.KAM_TAI.YAY TK.KAM_TAI.YAY_2;
+		constraint c5 = TK.KAM_TAI.NUNG TK.KAM_TAI.TAI_WESTERN_NUNG;
+		constraint c6 = TK.KAM_TAI.KHORAT_THAI TK.KAM_TAI.LAO TK.KAM_TAI.LAOTIEN TK.KAM_TAI.SIAMESE TK.KAM_TAI.SIAMESE_2 TK.KAM_TAI.TAI TK.KAM_TAI.TAI_NONG_KHAI TK.KAM_TAI.THAI TK.KAM_TAI.THAI_2 TK.KAM_TAI.THAI_3;
+		prset topologypr = constraints(c1,c2,c3,c4,c5,c6);
+		prset brlenspr = clock:uniform;
+		prset clockvarpr = igr;
+		prset treeagepr=Gamma(0.05, 0.005);
+		prset shapepr=Exponential(10);
+		set beagleprecision=double;
+		mcmcp Burninfrac=0.5 stoprule=no stopval=0.01;
+		mcmcp filename=../data/asjpNex/output/Tai-Kadai;
+		mcmcp samplefreq=1000 printfreq=5000 append=no;
+		mcmc ngen=1000000 nchains=4 nruns=2;
+		sump;
+		sumt;
+	end;

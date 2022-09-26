@@ -1,0 +1,25 @@
+#NEXUS
+[ID: 7019102921]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 Car.CARIBAN.HIXKARYANA,
+    2 Car.CARIBAN.KALINA,
+    3 Car.CARIBAN.MACUSHI,
+    4 Car.CARIBAN.MAKUSHI,
+    5 Car.CARIBAN.MAQUIRITARI;
+   tree tree_1 [p = 0.352, P = 0.352] = [&W 0.352295] ((5,(4,3)),(1,2));
+   tree tree_2 [p = 0.223, P = 0.575] = [&W 0.222555] ((4,3),(5,(1,2)));
+   tree tree_3 [p = 0.135, P = 0.710] = [&W 0.134731] (((5,(4,3)),1),2);
+   tree tree_4 [p = 0.131, P = 0.840] = [&W 0.130739] (1,((5,(4,3)),2));
+   tree tree_5 [p = 0.112, P = 0.952] = [&W 0.111776] (5,((4,3),(1,2)));
+   tree tree_6 [p = 0.030, P = 0.982] = [&W 0.029940] (3,(4,(5,(1,2))));
+   tree tree_7 [p = 0.015, P = 0.997] = [&W 0.014970] (4,(3,(5,(1,2))));
+   tree tree_8 [p = 0.001, P = 0.998] = [&W 0.000998] (((4,3),(5,1)),2);
+   tree tree_9 [p = 0.001, P = 0.999] = [&W 0.000998] (1,(5,((4,3),2)));
+   tree tree_10 [p = 0.001, P = 1.000] = [&W 0.000998] ((4,3),((5,1),2));
+end;

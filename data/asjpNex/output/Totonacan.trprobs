@@ -1,0 +1,16 @@
+#NEXUS
+[ID: 7844525411]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 Tot.TOTONACAN.TEPEHUA_HUEHUETLA,
+    2 Tot.TOTONACAN.TEPEHUA_TLACHICHILCO,
+    3 Tot.TOTONACAN.XICOTEPEC_TOTONAC;
+   tree tree_1 [p = 0.703, P = 0.703] = [&W 0.702595] (3,(1,2));
+   tree tree_2 [p = 0.164, P = 0.866] = [&W 0.163673] ((3,1),2);
+   tree tree_3 [p = 0.134, P = 1.000] = [&W 0.133733] (1,(3,2));
+end;

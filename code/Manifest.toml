@@ -595,13 +595,13 @@ uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 [[Logging]]
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
-[[MCPhylo]]
-deps = ["CSV", "CUDA", "ChainRules", "ChainRulesCore", "Compose", "DataFrames", "DataStructures", "DelimitedFiles", "Distributed", "Distributions", "FiniteDiff", "GPUArrays", "LightGraphs", "LinearAlgebra", "Markdown", "PDMats", "Plots", "Printf", "ProgressMeter", "Random", "RecipesBase", "Reexport", "Serialization", "Showoff", "SparseArrays", "SpecialFunctions", "Statistics", "StatsBase", "StatsPlots", "Zygote"]
-git-tree-sha1 = "25d9192c5e230ea1f6a2ae6473f53d465e2e52e9"
-repo-rev = "master"
-repo-url = "https://github.com/erathorn/MCPhylo.jl"
-uuid = "af0ac7d2-842d-415f-bd76-8183c117c674"
-version = "0.8.0"
+#[[MCPhylo]]
+#deps = ["CSV", "CUDA", "ChainRules", "ChainRulesCore", "Compose", "DataFrames", "DataStructures", "DelimitedFiles", "Distributed", "Distributions", "FiniteDiff", "GPUArrays", "LightGraphs", "LinearAlgebra", "Markdown", "PDMats", "Plots", "Printf", "ProgressMeter", "Random", "RecipesBase", "Reexport", "Serialization", "Showoff", "SparseArrays", "SpecialFunctions", "Statistics", "StatsBase", "StatsPlots", "Zygote"]
+#git-tree-sha1 = "25d9192c5e230ea1f6a2ae6473f53d465e2e52e9"
+#repo-rev = "master"
+#repo-url = "https://github.com/erathorn/MCPhylo.jl"
+#uuid = "af0ac7d2-842d-415f-bd76-8183c117c674"
+#version = "0.8.0"
 
 [[MKL_jll]]
 deps = ["Artifacts", "IntelOpenMP_jll", "JLLWrappers", "LazyArtifacts", "Libdl", "Pkg"]
@@ -1313,3 +1313,12 @@ deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg", "Wayland_jll", "Wayland_prot
 git-tree-sha1 = "ece2350174195bb31de1a63bea3a41ae1aa593b6"
 uuid = "d8fb68d0-12a3-5cfd-a85a-d49703b185fd"
 version = "0.9.1+5"
+
+[[MCPhylo]]
+deps = ["CSV", "CUDA", "ChainRules", "ChainRulesCore", "Compose", "DataFrames", "DataStructures", "DelimitedFiles", "Distributed", "Distributions", "FiniteDiff", "GPUArrays", "LightGraphs", "LinearAlgebra", "Markdown", "PDMats", "Plots", "Printf", "ProgressMeter", "Random", "RecipesBase", "Reexport", "Serialization", "Showoff", "SparseArrays", "SpecialFunctions", "Statistics", "StatsBase", "StatsPlots", "Zygote"]
+#git-tree-sha1 = "25d9192c5e230ea1f6a2ae6473f53d465e2e52e9"
+git-tree-sha1 = "8f440d0b2bc7eaf37e56741efe8fb999a8a5e5eb"
+repo-rev = "master"
+repo-url = "https://github.com/erathorn/MCPhylo.jl"
+uuid = "af0ac7d2-842d-415f-bd76-8183c117c674"
+version = "0.8.0"

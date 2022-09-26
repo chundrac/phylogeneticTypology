@@ -142,11 +142,11 @@ for fm in families
         maxPSRF = maximum([maxPSRF, maximum(vstat.PSRF)])
         maxPSRF <= 1.1 && meanStdev <= 0.01
     end
-    while !converged()
-        nrun += 1000000
-        open(mbFile, "w") do file
-            write(file, mbScript(fm, nrun, "yes"))
-        end
-        run(command)
-    end
+    #while !converged()
+    #    nrun += 000000
+    #    open(mbFile, "w") do file
+    #        write(file, mbScript(fm, nrun, "yes"))
+    #    end
+    #    run(command)
+    #end
 end

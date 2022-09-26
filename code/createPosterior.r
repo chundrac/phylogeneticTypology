@@ -1,5 +1,5 @@
 library(ape)
-library(geiger)
+#library(geiger)
 
 bi <- 0.5
 

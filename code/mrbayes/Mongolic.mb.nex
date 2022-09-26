@@ -1,0 +1,22 @@
+#Nexus
+	Begin MrBayes;
+		set seed=6789580436154794230;
+		set swapseed = 614090213;
+		execute ../data/asjpNex/Mongolic.nex;
+		lset rates=gamma coding=all;
+		constraint c1 = Alt.MONGOLIC.MONGUOR Alt.MONGOLIC.SANTA_MONGOLIAN;
+		constraint c2 = Alt.MONGOLIC.BURIAT_MONGOLIA Alt.MONGOLIC.MONGOLIAN Alt.MONGOLIC.KALMYK;
+		constraint c3 = Alt.MONGOLIC.BURIAT_MONGOLIA Alt.MONGOLIC.MONGOLIAN;
+		prset topologypr = constraints(c1,c2,c3);
+		prset brlenspr = clock:uniform;
+		prset clockvarpr = igr;
+		prset treeagepr=Gamma(0.05, 0.005);
+		prset shapepr=Exponential(10);
+		set beagleprecision=double;
+		mcmcp Burninfrac=0.5 stoprule=no stopval=0.01;
+		mcmcp filename=../data/asjpNex/output/Mongolic;
+		mcmcp samplefreq=1000 printfreq=5000 append=no;
+		mcmc ngen=1000000 nchains=4 nruns=2;
+		sump;
+		sumt;
+	end;

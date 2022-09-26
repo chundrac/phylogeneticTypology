@@ -1,0 +1,34 @@
+#NEXUS
+[ID: 6132276516]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 NDe.ATHAPASKAN.CHIPEWYAN,
+    2 NDe.ATHAPASKAN.HUPA,
+    3 NDe.ATHAPASKAN.HUPA_2,
+    4 NDe.ATHAPASKAN.KOYUKON,
+    5 NDe.ATHAPASKAN.NAVAHO,
+    6 NDe.ATHAPASKAN.NAVAJO,
+    7 NDe.ATHAPASKAN.SARCEE,
+    8 NDe.ATHAPASKAN.TANACROSS,
+    9 NDe.TLINGIT.TLINGIT;
+   tree tree_1 [p = 0.451, P = 0.451] = [&W 0.451098] (9,(((6,5),((8,4),(7,1))),(3,2)));
+   tree tree_2 [p = 0.262, P = 0.714] = [&W 0.262475] (9,((6,5),(((8,4),(7,1)),(3,2))));
+   tree tree_3 [p = 0.079, P = 0.792] = [&W 0.078842] (9,(((6,5),(8,(4,(7,1)))),(3,2)));
+   tree tree_4 [p = 0.053, P = 0.845] = [&W 0.052894] (9,((6,5),((8,(4,(7,1))),(3,2))));
+   tree tree_5 [p = 0.050, P = 0.895] = [&W 0.049900] (9,(((8,4),(7,1)),((6,5),(3,2))));
+   tree tree_6 [p = 0.041, P = 0.936] = [&W 0.040918] (9,(((6,5),(4,(8,(7,1)))),(3,2)));
+   tree tree_7 [p = 0.031, P = 0.967] = [&W 0.030938] (9,((6,5),((4,(8,(7,1))),(3,2))));
+   tree tree_8 [p = 0.009, P = 0.976] = [&W 0.008982] (9,((8,(4,(7,1))),((6,5),(3,2))));
+   tree tree_9 [p = 0.005, P = 0.981] = [&W 0.004990] ((6,5),(9,(((8,4),(7,1)),(3,2))));
+   tree tree_10 [p = 0.005, P = 0.986] = [&W 0.004990] (9,((4,(8,(7,1))),((6,5),(3,2))));
+   tree tree_11 [p = 0.004, P = 0.990] = [&W 0.003992] ((9,(6,5)),(((8,4),(7,1)),(3,2)));
+   tree tree_12 [p = 0.004, P = 0.994] = [&W 0.003992] (((9,(6,5)),((8,4),(7,1))),(3,2));
+   tree tree_13 [p = 0.003, P = 0.997] = [&W 0.002994] ((9,((6,5),((8,4),(7,1)))),(3,2));
+   tree tree_14 [p = 0.002, P = 0.999] = [&W 0.001996] ((6,5),(((8,4),(7,1)),(9,(3,2))));
+   tree tree_15 [p = 0.001, P = 1.000] = [&W 0.000998] (((8,4),(7,1)),((9,(6,5)),(3,2)));
+end;

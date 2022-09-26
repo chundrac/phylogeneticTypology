@@ -1,0 +1,16 @@
+#NEXUS
+[ID: 7724640886]
+[This file contains the trees that were found during the MCMC
+search, sorted by posterior probability. "p" indicates the
+posterior probability of the tree whereas "P" indicates the
+cumulative posterior probability.]
+
+begin trees;
+   translate
+    1 Sen.SENAGI.AMGOTRO,
+    2 Sen.SENAGI.ANGOR,
+    3 Sen.SENAGI.MONGOWAR;
+   tree tree_1 [p = 0.461, P = 0.461] = [&W 0.461078] ((3,1),2);
+   tree tree_2 [p = 0.312, P = 0.773] = [&W 0.312375] (1,(3,2));
+   tree tree_3 [p = 0.227, P = 1.000] = [&W 0.226547] (3,(1,2));
+end;

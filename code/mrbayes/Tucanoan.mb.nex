@@ -1,0 +1,26 @@
+#Nexus
+	Begin MrBayes;
+		set seed=6789580436154794230;
+		set swapseed = 614090213;
+		execute ../data/asjpNex/Tucanoan.nex;
+		lset rates=gamma coding=all;
+		constraint c1 = Tuc.TUCANOAN.CUBEO Tuc.TUCANOAN.CUBEO_2 Tuc.TUCANOAN.DESANO Tuc.TUCANOAN.DESANO_2 Tuc.TUCANOAN.BARASANO Tuc.TUCANOAN.TANIMUCA Tuc.TUCANOAN.TANIMUCA_RETUARA Tuc.TUCANOAN.TUCANO Tuc.TUCANOAN.TUCANO_2;
+		constraint c2 = Tuc.TUCANOAN.KOREGUAJE Tuc.TUCANOAN.KOREGUAYE Tuc.TUCANOAN.SIONA;
+		constraint c3 = Tuc.TUCANOAN.CUBEO Tuc.TUCANOAN.CUBEO_2 Tuc.TUCANOAN.DESANO Tuc.TUCANOAN.DESANO_2 Tuc.TUCANOAN.BARASANO;
+		constraint c4 = Tuc.TUCANOAN.TANIMUCA Tuc.TUCANOAN.TANIMUCA_RETUARA;
+		constraint c5 = Tuc.TUCANOAN.TUCANO Tuc.TUCANOAN.TUCANO_2;
+		constraint c6 = Tuc.TUCANOAN.CUBEO Tuc.TUCANOAN.CUBEO_2 Tuc.TUCANOAN.DESANO Tuc.TUCANOAN.DESANO_2;
+		constraint c7 = Tuc.TUCANOAN.DESANO Tuc.TUCANOAN.DESANO_2;
+		prset topologypr = constraints(c1,c2,c3,c4,c5,c6,c7);
+		prset brlenspr = clock:uniform;
+		prset clockvarpr = igr;
+		prset treeagepr=Gamma(0.05, 0.005);
+		prset shapepr=Exponential(10);
+		set beagleprecision=double;
+		mcmcp Burninfrac=0.5 stoprule=no stopval=0.01;
+		mcmcp filename=../data/asjpNex/output/Tucanoan;
+		mcmcp samplefreq=1000 printfreq=5000 append=no;
+		mcmc ngen=1000000 nchains=4 nruns=2;
+		sump;
+		sumt;
+	end;
