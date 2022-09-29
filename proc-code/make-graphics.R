@@ -126,9 +126,6 @@ project_data <-  function(
 }
 
 load('posterior-params.Rdata')
-load('output/fit_model-fam-geo.stan_10.Rdata')
-colnames(lat.all) <- families
-colnames(lon.all) <- families
 
 set.seed(1234)
 inds.to.sample <- sample(c(1:nrow(lat.all)))
