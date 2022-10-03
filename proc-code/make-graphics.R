@@ -7,6 +7,10 @@ require(geosphere)
 library(dplyr)
 
 library(ggrastr)
+library(tikzDevice)
+
+library(HDInterval)
+library(ggridges)
 
 project_data <-  function(
   df,  # a dataframe with Longitude, Latitude, and  data
@@ -127,6 +131,10 @@ project_data <-  function(
 
 load('posterior-params.Rdata')
 
+loo_compare(loo(model.loglik),loo(model.fam.loglik),loo(model.fam.geo.loglik))
+
+wts = loo_model_weights(list(model.loglik,model.fam.loglik,model.fam.geo.loglik))
+
 set.seed(1234)
 inds.to.sample <- sample(c(1:nrow(lat.all)))
 
@@ -160,7 +168,7 @@ df.g2 <- project_data(df = lonlat.med,
                       # projection = "+proj=robin"
 )
 
-pdf('homelands.pdf',height=9,width=9)
+tikz('homelands.tex',height=9,width=9)
 ggplot() + theme_void() + 
   
   geom_polygon(data = df.g$base_map,
@@ -177,17 +185,32 @@ ggplot() + theme_void() +
             size = .25
   ) + 
   
-  geom_text(data = df.g$graticule_labels,
-            aes(x = X, y = Y, label = labels), size = 1.5, color = 'grey30') + 
+  #geom_text(data = df.g$graticule_labels,
+  #          aes(x = X, y = Y, label = labels), size = 1, color = 'grey30') + 
   
-  #geom_point(data = df.g$data,
-  #           aes(x = X, y = Y, color = family),size=.1,alpha=.01) + 
-  stat_density_2d(data = df.g$data,geom='tile',
-                             aes(x = X, y = Y, color = family, alpha=after_stat(density)),size=.5) + 
+  rasterize(geom_point(data = df.g$data,
+             aes(x = X, y = Y, color = family),size=.01,alpha=.01),dpi=300) + 
+  #stat_density_2d(data = df.g$data,geom='tile',
+  #                           aes(x = X, y = Y, color = family, alpha=after_stat(density)),size=.5) + 
   geom_point(data = df.g2$data,
              aes(x = X, y = Y),size=.5,alpha=.5) + 
   geom_text_repel(data = df.g2$data,
-            aes(x = X, y = Y, label = family), size=2) + 
+            aes(x = X, y = Y, label = family), size=3) + 
   theme(legend.position="none")
+
+dev.off()
+
+#dat <- data.frame('$\\beta^s_{\\text{\\sc geo}}$'=beta.s.geo)
+dat <- data.frame('datx'=beta.s.geo)
+
+options(tikzMetricPackages = c("\\usepackage[utf8{inputenc}",
+                               "\\usepackage[T1]{fontenc}", "\\usetikzlibrary{calc}", "\\usepackage{amssymb}"))
+
+
+tikz('posterior-dist.tex')
+ggplot(dat, aes(x = beta_s_geo, y = 0, fill = stat(quantile))) + 
+  geom_density_ridges_gradient(quantile_lines = TRUE, quantile_fun = hdi, vline_linetype = 2) +
+  scale_fill_manual(values = c("transparent", "lightblue", "transparent"), guide = "none") + ylab('Posterior density') + xlab('')
+#> Picking joint bandwidth of 0.227
 
 dev.off()
