@@ -74,11 +74,51 @@ params = CSV.read(paramsF, DataFrame)
 codes = CSV.read(codesF, DataFrame)
 ##
 
-woFeatures = ["87A", "86A", "85A", "88A", "89A", "83A", "90A", "82A"]
+#woFeatures = ["87A", "86A", "85A", "88A", "89A", "83A", "90A", "82A"]
+woFeatures = params.ID
 
-data = CSV.read("../data/stressMtx.csv",DataFrame)
 
-rename!(data, :Column1 => :Glottocode)
+data = unstack(
+    (@pipe vals |>
+           filter(x -> x.Parameter_ID ∈ woFeatures, _) |>
+           select(_, [:Language_ID, :Parameter_ID, :Value])),
+    :Language_ID,
+    :Parameter_ID,
+    :Value,
+)
+
+##
+
+filter!(x -> x.Parameter_ID ∈ woFeatures, codes)
+
+select!(codes, [:ID, :Parameter_ID, :Name, :Number])
+
+#filter!(x -> x.Number ∈ [1,2], codes)
+##
+
+for i in 1:size(data,1), j in 2:size(data,2)
+    v = data[i,j]
+    if !ismissing(v) && v > 2
+        data[i,j] = missing
+    end
+end
+
+
+##
+nValues = vec(8 .- mapslices(x -> sum(ismissing.(x)), Array(data), dims=2))
+insertcols!(data, 10, :nValues => nValues)
+
+sort!(data, :nValues, rev=true)
+
+##
+
+dropmissing!(languages, :Glottocode)
+
+data = innerjoin(
+    data,
+    select(languages, [:ID, :Glottocode]),
+    on = :Language_ID => :ID,
+)
 
 unique!(data, :Glottocode)
 
@@ -164,12 +204,42 @@ asjpCC = filter(x -> x.longname ∈ taxa, asjp18Clustered)
 
 data = filter(x -> x.longname ∈ taxa, data)
 
+#fDict = Dict(
+#    "82A" => "VS",
+#    "83A" => "VO",
+#    "85A" => "PN",
+#    "86A" => "NG",
+#    "87A" => "NA",
+#    "88A" => "ND",
+#    "89A" => "NNum",
+#    "90A" => "NRc"
+#)
 
-select!(data, [:longname, :glot_fam, :Antepenultimate, :Initial, :Penultimate, :Second, :Third, :Ultimate, :LeftEdge, :LeftOriented, :NotPredictable, :RightEdge, :RightOriented, :Unbounded])
+
+#rename!(data, fDict)
+
+#select!(data, [:longname, :glot_fam, :VS, :VO, :PN, :NG, :NA, :ND, :NNum, :NRc])
+data = data[:,cat(dims=1,[2,197],4:196)]
 
 CSV.write("../data/charMtx.csv", data)
 
 ##
+
+features = names(data)[3:end]
+
+fPairs = [
+    join([f1, f2], "-") for (i, f1) in enumerate(features) for
+    (j, f2) in enumerate(features) if i < j
+]
+
+open("../data/fpairs.txt", "w") do file
+    for fp in fPairs
+        write(file, fp)
+        write(file, "\n")
+    end
+end
+##
+
 
 famFreqs = sort(combine(groupby(data, :glot_fam), nrow), :nrow, rev=true)
 
@@ -209,6 +279,18 @@ codingDict = Dict(
 )
 
 ##
+
+#pairMtx = DataFrame(taxon = taxa)
+#for fp in fPairs
+#    f1, f2 = Symbol.(split(fp, "-"))
+#    insertcols!(
+#        pairMtx,
+#        fp => [codingDict[x] for x in zip(data[:, f1], data[:, f2])],
+#    )
+#end
+
+#CSV.write("../data/fpairMtx.csv", pairMtx)
+
 ##
 
 try
